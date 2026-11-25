@@ -10,13 +10,17 @@
 # simplified version, using only the two conditions in the data.
 
 # age_band: 0-17, 18-39, 40-59, 60-74, 75+. Used as a model input and to report
-# results by age group. The 75+ cut-off is selected as th older-adult threshold.
+# results by age group. The 75+ cut-off is selected as the older-adult threshold.
 
 # Mortality and patient_id are left out of the inputs. Mortality is an outcome that
 # is not known at triage, so using it would leak the answer. Patient ID is only a label.
-# These features are assumptions built from the columns available. 
+# These features are assumptions built from the columns available.
 
 import pandas as pd
+from sklearn.compose import ColumnTransformer
+from sklearn.impute import SimpleImputer
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import FunctionTransformer, OneHotEncoder, StandardScaler
 
 from src.validate import INPUTS
 
@@ -36,6 +40,26 @@ def add_features(df):
     df["comorbidity_count"] = df["diabetes"] + df["hypertension"]
     df["age_band"] = pd.cut(df["age"], bins=AGE_BINS, labels=AGE_LABELS).astype(object)
     return df
+
+
+def build_pipeline(model):
+    number_steps = Pipeline([
+        ("fill", SimpleImputer(strategy="median", add_indicator=True)),
+        ("scale", StandardScaler()),
+    ])
+    category_steps = Pipeline([
+        ("fill", SimpleImputer(strategy="most_frequent")),
+        ("encode", OneHotEncoder(handle_unknown="ignore")),
+    ])
+    prep = ColumnTransformer([
+        ("numbers", number_steps, NUMBER_FEATURES),
+        ("categories", category_steps, CATEGORY_FEATURES),
+    ])
+    return Pipeline([
+        ("features", FunctionTransformer(add_features)),
+        ("prep", prep),
+        ("model", model),
+    ])
 
 
 def get_inputs(df):
