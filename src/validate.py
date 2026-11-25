@@ -1,6 +1,24 @@
 # AINT602 ML Pipeline Data Validation
 # Matt Chamley 26 November 2026
 
+# Validation assumptions
+
+# Ranges are plausibility limits, not clinical normal ranges. They are set wide so
+# only entry errors or impossible values are caught.
+# Units are assumed, because the dataset does not state them: age in years, BMI in
+# kg/m2, blood pressure in mmHg, glucose, cholesterol and creatinine in mg/dL.
+# Every value in this dataset sits inside these ranges (for example age 0 to 90,
+# glucose 70 to 199), so the ranges remove no rows here. They protect prediction
+# runs, where new patient data may contain entry errors.
+
+# The only rule that removes rows is diastolic higher than systolic, which cannot be
+# true given how the two measures are defined: 136 rows (1.4%).
+
+# Missing values are kept, not dropped, so the imputer can fill them.
+
+# Training drops bad rows and reports the counts. 
+# Prediction stops with an error so no patient silently leaves the triage queue.
+
 import pandas as pd
 
 INPUTS = [
