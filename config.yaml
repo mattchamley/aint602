@@ -1,1 +1,13 @@
-# Placeholder. Settings (paths, seed, split sizes, column names) go here.
+# AINT602 ML Pipeline Config File
+# Matt Chamley 26 November 2026
+
+data_path: data/synthetic_clinical_dataset.csv
+target: readmission_30d
+random_state: 42
+test_size: 0.15
+val_size: 0.15
+model_path: models/model.joblib
+model_info_path: models/model_info.json
+prediction_log_path: reports/prediction_log.csv
+reports_dir: reports
+mlflow_experiment: readmission_30d
