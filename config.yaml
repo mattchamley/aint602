@@ -11,3 +11,13 @@ model_info_path: models/model_info.json
 prediction_log_path: reports/prediction_log.csv
 reports_dir: reports
 mlflow_experiment: readmission_30d
+
+
+logistic_regression:
+  max_iter: 1000
+  class_weight: balanced
+
+random_forest:
+  n_estimators: 200
+  max_depth: 6
+  class_weight: balanced
