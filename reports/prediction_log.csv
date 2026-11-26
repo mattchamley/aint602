@@ -1,0 +1,21 @@
+age,sex,bmi,systolic_bp,diastolic_bp,glucose,cholesterol,creatinine,diabetes,hypertension,diagnosis,readmission_probability,high_risk_flag,queue_rank,model_name,model_commit,predicted_at
+43,Female,28.6,132.0,72.0,87.1,136.5,1.21,0,1,Pneumonia,0.6314694599667752,1,1,logistic_regression,e18a4ef,2026-11-26T11:36:09
+61,Female,26.1,138.0,73.0,79.3,221.0,0.6,1,0,Normal,0.6032798326744033,1,2,logistic_regression,e18a4ef,2026-11-26T11:36:09
+56,Female,34.7,97.0,69.0,70.0,192.9,0.99,1,0,Heart Failure,0.5962815982334371,1,3,logistic_regression,e18a4ef,2026-11-26T11:36:09
+80,Male,25.0,100.0,86.0,87.7,205.8,0.86,0,1,Heart Failure,0.5920436636048673,1,4,logistic_regression,e18a4ef,2026-11-26T11:36:09
+32,Male,29.5,111.0,95.0,97.9,171.5,0.91,0,1,Normal,0.5705055316660874,1,5,logistic_regression,e18a4ef,2026-11-26T11:36:09
+50,Female,31.9,104.0,96.0,79.3,206.4,0.65,0,1,Normal,0.5700039664406472,1,6,logistic_regression,e18a4ef,2026-11-26T11:36:09
+44,Male,31.9,130.0,60.0,70.0,159.0,1.66,0,0,Normal,0.49596153767851725,0,7,logistic_regression,e18a4ef,2026-11-26T11:36:09
+66,Female,27.7,129.0,60.0,90.9,148.7,1.06,0,0,Pneumonia,0.43785398216327054,0,8,logistic_regression,e18a4ef,2026-11-26T11:36:09
+25,Female,33.6,139.0,75.0,106.6,211.5,1.17,0,0,Heart Failure,0.4372568180216835,0,9,logistic_regression,e18a4ef,2026-11-26T11:36:09
+46,Male,25.0,124.0,87.0,80.8,181.7,1.43,0,0,Pneumonia,0.42734588782095173,0,10,logistic_regression,e18a4ef,2026-11-26T11:36:09
+50,Female,18.7,111.0,75.0,93.9,140.8,0.83,0,0,Heart Failure,0.4090267111302074,0,11,logistic_regression,e18a4ef,2026-11-26T11:36:09
+68,Male,16.2,121.0,84.0,82.6,189.8,0.91,0,0,Normal,0.40820634672675354,0,12,logistic_regression,e18a4ef,2026-11-26T11:36:09
+53,Female,30.9,135.0,84.0,97.4,166.1,0.96,0,0,Pneumonia,0.40658034872396337,0,13,logistic_regression,e18a4ef,2026-11-26T11:36:09
+58,Male,30.8,112.0,78.0,113.9,189.5,0.98,0,0,Normal,0.38998083728845406,0,14,logistic_regression,e18a4ef,2026-11-26T11:36:09
+58,Female,29.4,103.0,80.0,143.9,191.0,0.95,0,0,Normal,0.38637420305610337,0,15,logistic_regression,e18a4ef,2026-11-26T11:36:09
+66,Male,30.1,137.0,79.0,139.7,190.7,0.82,0,0,Normal,0.38059823547797944,0,16,logistic_regression,e18a4ef,2026-11-26T11:36:09
+55,Male,30.9,109.0,79.0,161.4,120.0,1.04,0,0,Normal,0.3735783699935628,0,17,logistic_regression,e18a4ef,2026-11-26T11:36:09
+58,Male,18.7,90.0,80.0,74.8,196.6,0.5,0,0,Normal,0.36895566114299955,0,18,logistic_regression,e18a4ef,2026-11-26T11:36:09
+35,Female,32.9,135.0,60.0,129.0,179.8,0.86,0,0,Sepsis,0.3230263610978705,0,19,logistic_regression,e18a4ef,2026-11-26T11:36:09
+68,Other,33.1,120.0,81.0,103.8,235.3,1.01,0,0,Pneumonia,0.22961877824592572,0,20,logistic_regression,e18a4ef,2026-11-26T11:36:09
