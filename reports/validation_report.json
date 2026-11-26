@@ -1,0 +1,9 @@
+{
+  "rows_in": 10000,
+  "missing_values": {},
+  "problems": {
+    "diastolic higher than systolic": 136
+  },
+  "duplicate_rows": 0,
+  "rows_out": 9864
+}
