@@ -1,0 +1,33 @@
+# AINT602 ML Pipeline CI
+# Matt Chamley 27 November 2026
+
+name: pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test-and-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+
+      - name: Install requirements
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: python -m pytest tests -v
+
+      - name: Train models
+        run: python -m src.train
+
+      - name: Predict on the sample patients
+        run: python -m src.predict
