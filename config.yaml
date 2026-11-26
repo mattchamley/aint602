@@ -21,3 +21,5 @@ random_forest:
   n_estimators: 200
   max_depth: 6
   class_weight: balanced
+
+sample_patients_path: data/sample_new_patients.csv
