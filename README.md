@@ -1,15 +1,14 @@
 # AINT602 ML 30-day readmission pipeline
-# Mathew Chamley (S00443499) 27 Novemeber 2026
-
-# 30-day readmission pipeline (AINT602 Assessment 2)
-
-Student: Mathew Chamley (S00443499)
+# Mathew Chamley 27 November 2026
 
 ## What this is
 
-A working MLOps pipeline that takes patient data from ingestion through to a ranked prediction queue. It predicts the risk of a 30-day hospital readmission, using Dataset B (synthetic clinical data, 10,000 patients, 14 columns). It supports the triage prioritisation design from Assessment 1: a ranked list to help staff decide who to look at first. It is decision support only and does not make clinical decisions.
+A working MLOps pipeline that takes patient data from ingestion through to a ranked prediction queue. 
+It predicts the risk of a 30-day hospital readmission, using synthetic clinical data (10K patients, 14 columns). 
+It supports triage prioritisation. 
+It is decision support only and does not make clinical decisions.
 
-Data source: Dataset B, provided for AINT602. (Confirm this wording against the brief.)
+Data source: Dataset B
 
 ## Results
 
@@ -19,7 +18,9 @@ Data source: Dataset B, provided for AINT602. (Confirm this wording against the 
 | Logistic regression (selected) | 0.661 | 0.620 | 0.527 |
 | Random forest | 0.659 | 0.614 | 0.546 |
 
-The selected model was scored once on the test set: accuracy 0.644, ROC-AUC 0.620, recall 0.558, precision 0.209. It made 436 false positives and 91 false negatives. The baseline scores 0.861 accuracy on the test set but finds no readmissions, so models are judged on ROC-AUC and recall, not accuracy.
+The selected model was scored once on the test set: accuracy 0.644, ROC-AUC 0.620, recall 0.558, precision 0.209. 
+It made 436 false positives and 91 false negatives. 
+The baseline scores 0.861 accuracy on the test set but finds no readmissions, so models are judged on ROC-AUC and recall, not accuracy.
 
 ## How to run it
 
@@ -90,5 +91,5 @@ evidence/             screenshots for the report appendix
 - The models are balanced for the rare readmitted group. This makes the predicted probabilities higher than real risk (a mean of 0.452 against a training rate of 0.139), so use the ranking and not the percentage.
 - The signal in this data is weak (ROC-AUC about 0.62).
 - Recall differs between age bands (0.47 to 0.72 on the test set). The groups for sex "Other" (18 patients) and ages 0-17 (31 patients) are too small to judge.
-- Parts of the Assessment 1 design are not built: clinician approval, clinician review and a monitoring dashboard. Monitoring is limited to the prediction log and the summary lines printed by `predict.py`.
 - The data is synthetic, so results say nothing about real patients.
+
