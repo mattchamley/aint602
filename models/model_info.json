@@ -1,13 +1,13 @@
 {
   "model_name": "logistic_regression",
-  "trained_at": "2026-11-26T11:20:50",
-  "git_commit": "e18a4ef",
+  "trained_at": "2026-11-27T14:45:53",
+  "git_commit": "70eee27",
   "data_file": "data/synthetic_clinical_dataset.csv",
   "data_hash": "f0d86b9337b29d800814636609d754c2",
   "rows_used": 9864,
   "training_readmission_rate": 0.13933951332560834,
   "random_state": 42,
-  "mlflow_run_id": "436802b12c054fd19a798219120c4144",
+  "mlflow_run_id": "3e9ae5aac808454aa396f94dd29f2e8f",
   "test_scores": {
     "accuracy": 0.643918918918919,
     "roc_auc": 0.6196217097742757,
