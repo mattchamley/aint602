@@ -1,4 +1,4 @@
-# AINT620 ML Pipeline Training Script
+# AINT602 ML Pipeline Training Script
 # Matt Chamley 26 November 2026
 
 import json

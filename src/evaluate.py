@@ -1,4 +1,4 @@
-# AINT602 ML Pipeline Features Script
+# AINT602 ML Pipeline Evaluation Script
 # Matt Chamley 26 November 2026
 
 # Evaluation choices
