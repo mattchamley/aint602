@@ -92,4 +92,3 @@ evidence/             screenshots for the report appendix
 - The signal in this data is weak (ROC-AUC about 0.62).
 - Recall differs between age bands (0.47 to 0.72 on the test set). The groups for sex "Other" (18 patients) and ages 0-17 (31 patients) are too small to judge.
 - The data is synthetic, so results say nothing about real patients.
-
